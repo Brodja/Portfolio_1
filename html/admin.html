@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <title>Admin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="login__contanier">
+        <div class="nav">
+          <div class="nav__btn">
+            Login
+            <hr />
+          </div>
+          <div class="nav__btn">
+            <a href="#" class="go_register_block" id="go_register_block"
+              >Registration</a
+            >
+          </div>
+        </div>
+        <div class="login__form">
+          <form class="login" method="post" autocomplete="on">
+            <input
+              type="text"
+              class="input__style"
+              placeholder="Login"
+              id="login_login_field"
+              onkeyup="check_1()"
+            />
+            <div class="messg__area">
+              <span class="mess__err" id="err_login2_1">Enter your login</span>
+            </div>
+            <input
+              type="password"
+              class="input__style"
+              placeholder="Password"
+              id="login_pass_field"
+              onkeyup="check_1()"
+            />
+            <div class="messg__area">
+              <span class="mess__err" id="err_login2_2"
+                >Enter the password</span
+              >
+            </div>
+            <!-- <div class="case__log__btn">
+                    <button type="submit" class="button" id="login">
+                      <span class="button__login__name">Sing in</span>
+                    </button>
+                  </div> -->
+            <div class="login__button">
+              Sign In
+              <svg
+                width="100"
+                height="50"
+                viewBox="0 0 100 50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="0" y="0" rx="15" fill="none" width="100" height="50" />
+              </svg>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- блок регистрации -->
+      <div class="register__block" id="register__block">
+        <div class="register__step__1" id="register__step__1">
+          <div class="nav">
+            <div class="nav__btn">
+              <a href="#" id="go_login">Login</a>
+            </div>
+            <div class="nav__btn">
+              Register
+              <hr />
+            </div>
+          </div>
+          <div class="number__steps">
+            <div class="circle"></div>
+            <hr class="steps__hr" />
+            <div class="circle"></div>
+            <hr class="steps__hr" />
+            <div class="circle"></div>
+          </div>
+          <div class="name__steps">
+            <div class="name__step__1">
+              <div class="nmbstp">Step 1</div>
+              <div class="namestp">Login and password</div>
+            </div>
+            <div class="name__step__2">
+              <div class="nmbstp">Step 2</div>
+              <div class="namestp">Personal data</div>
+            </div>
+            <div class="name__step__3">
+              <div class="nmbstp">Step 3</div>
+              <div class="namestp">Verification</div>
+            </div>
+          </div>
+
+          <div class="input__block">
+            <div class="input__element">
+              <div class="green__div" id="green_div_1"></div>
+              <input
+                type="text"
+                placeholder="Login"
+                class="input__style"
+                onkeyup="check_2()"
+                id="register_login_field"
+              />
+            </div>
+            <div class="messg__area">
+              <span class="mess__err" id="err_login_1">Enter your login</span>
+              <span class="mess__err" id="err_login_2"
+                >The minimum login length is 5 characters</span
+              >
+              <span class="mess__good" id="err_login_3">Login available</span>
+            </div>
+            <div class="input__element">
+              <div class="green__div" id="green_div_2"></div>
+              <input
+                type="password"
+                placeholder="Password"
+                class="input__style"
+                onkeyup="check_2()"
+                id="register_pass_field"
+              />
+            </div>
+            <div class="messg__area">
+              <span class="mess__err" id="err_pass1_1">Enter the password</span>
+              <span class="mess__err" id="err_pass1_2"
+                >The minimum password length is 4 characters</span
+              >
+            </div>
+            <div class="input__element">
+              <div class="green__div" id="green_div_3"></div>
+              <input
+                type="password"
+                placeholder="Password confirmation"
+                class="input__style"
+                onkeyup="check_2()"
+                id="register_pass2_field"
+              />
+            </div>
+            <div class="messg__area">
+              <span class="mess__err" id="err_pass2_1"
+                >Passwords do not match</span
+              >
+              <span class="mess__good" id="err_pass2_2">Passwords match</span>
+            </div>
+          </div>
+          <div class="next__step__2__button">
+            Next
+            <svg
+              width="100"
+              height="50"
+              viewBox="0 0 100 50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                id="step_2_next"
+                x="0"
+                y="0"
+                rx="15"
+                fill="none"
+                width="100"
+                height="50"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="register__step__2" id="register__step__2">
+          <div class="nav">
+            <div class="nav__btn">
+              <a href="#" id="go_login">Login</a>
+            </div>
+            <div class="nav__btn">
+              Register
+              <hr />
+            </div>
+          </div>
+          <div class="number__steps">
+            <div class="circle"></div>
+            <hr class="steps__hr" />
+            <div class="circle"></div>
+            <hr class="steps__hr" />
+            <div class="circle"></div>
+          </div>
+          <div class="name__steps">
+            <div class="name__step__1">
+              <div class="nmbstp">Step 1</div>
+              <div class="namestp">Login and password</div>
+            </div>
+            <div class="name__step__2">
+              <div class="nmbstp">Step 2</div>
+              <div class="namestp">Personal data</div>
+            </div>
+            <div class="name__step__3">
+              <div class="nmbstp">Step 3</div>
+              <div class="namestp">Verification</div>
+            </div>
+          </div>
+          <div class="information__block__row">
+            <div class="one__information__block__column">
+              <div class="one__area__item">
+                <textarea
+                  name=""
+                  class="one__area"
+                  id="about_school_edit"
+                  placeholder="School"
+                  maxlength="40"
+                ></textarea>
+              </div>
+              <div class="one__area__item">
+                <textarea
+                  name=""
+                  class="one__area"
+                  id="about_work_edit"
+                  placeholder="Work"
+                  maxlength="40"
+                ></textarea>
+              </div>
+              <div class="one__area__item">
+                <textarea
+                  name=""
+                  class="one__area"
+                  id="about_education_edit"
+                  placeholder="University"
+                  maxlength="40"
+                ></textarea>
+              </div>
+            </div>
+            <div class="one__information__block__column">
+              <div class="one__area__item">
+                <textarea
+                  name=""
+                  class="one__area"
+                  id="about_hobby_edit"
+                  placeholder="Hobby"
+                  maxlength="40"
+                ></textarea>
+              </div>
+              <div class="one__area__item">
+                <textarea
+                  name=""
+                  class="one__area"
+                  id="about_like_edit"
+                  placeholder="Preferences"
+                  maxlength="40"
+                ></textarea>
+              </div>
+              <div class="one__area__item">
+                <textarea
+                  name=""
+                  class="one__area"
+                  id="about_age_edit"
+                  placeholder="Age"
+                  maxlength="3"
+                ></textarea>
+              </div>
+            </div>
+            <div class="one__information__block__column">
+              <div class="one__area__item">
+                <textarea
+                  name=""
+                  class="one__area"
+                  id="about_me_edit"
+                  placeholder="About myself"
+                  maxlength="240"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="buttons__step__2">
+            <div class="prev__step__1__button">
+              Prev
+              <svg
+                width="100"
+                height="50"
+                viewBox="0 0 100 50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  id="step_2_next"
+                  x="0"
+                  y="0"
+                  rx="15"
+                  fill="none"
+                  width="100"
+                  height="50"
+                />
+              </svg>
+            </div>
+            <div class="go__foto">
+              Foto
+              <svg
+                width="100"
+                height="50"
+                viewBox="0 0 100 50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  id="step_2_next"
+                  x="0"
+                  y="0"
+                  rx="15"
+                  fill="none"
+                  width="100"
+                  height="50"
+                />
+              </svg>
+            </div>
+            <div class="next__step__3__button">
+              Next
+              <svg
+                width="100"
+                height="50"
+                viewBox="0 0 100 50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  id="step_2_next"
+                  x="0"
+                  y="0"
+                  rx="15"
+                  fill="none"
+                  width="100"
+                  height="50"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="register__step__3" id="register__step__3">
+          <div class="nav">
+            <div class="nav__btn">
+              <a href="#" id="go_login">Login</a>
+            </div>
+            <div class="nav__btn">
+              Register
+              <hr />
+            </div>
+          </div>
+          <div class="number__steps">
+            <div class="circle"></div>
+            <hr class="steps__hr" />
+            <div class="circle"></div>
+            <hr class="steps__hr" />
+            <div class="circle"></div>
+          </div>
+          <div class="name__steps">
+            <div class="name__step__1">
+              <div class="nmbstp">Step 1</div>
+              <div class="namestp">Login and password</div>
+            </div>
+            <div class="name__step__2">
+              <div class="nmbstp">Step 2</div>
+              <div class="namestp">Personal data</div>
+            </div>
+            <div class="name__step__3">
+              <div class="nmbstp">Step 3</div>
+              <div class="namestp">Verification</div>
+            </div>
+          </div>
+          <div class="finish__content">
+            <div class="block__row">
+              <!--  flex-element  -->
+              <div class="block__element block__element_1">
+                <!--  content  -->
+                <div class="block__content">
+                  <div class="title">
+                    About myself
+                  </div>
+                  <div class="text big_text" id="about_me">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+              </div>
+              <!--  flex-element  -->
+              <div class="block__element block__element_2">
+                <!--  content  -->
+                <div class="block__content">
+                  <div class="title">
+                    Scholl
+                  </div>
+                  <div class="text" id="about_school">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  </div>
+                </div>
+              </div>
+              <!--  flex-element  -->
+              <div class="block__element block__element_3">
+                <!--  content  -->
+                <div class="block__content">
+                  <div class="title">
+                    Work
+                  </div>
+                  <div class="text" id="about_work">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  </div>
+                </div>
+              </div>
+              <div class="block__element block__element_4">
+                <!--  content  -->
+                <div class="block__content">
+                  <div class="title">
+                    University
+                  </div>
+                  <div class="text" id="about_education">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  </div>
+                </div>
+              </div>
+              <div class="block__element block__element_5">
+                <!--  content  -->
+                <div class="block__content">
+                  <div class="title">
+                    Hobby
+                  </div>
+                  <div class="text" id="about_hobby">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  </div>
+                </div>
+              </div>
+              <div class="block__element block__element_6">
+                <!--  content  -->
+                <div class="block__content">
+                  <div class="title">
+                    Preferences
+                  </div>
+                  <div class="text" id="about_like">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  </div>
+                </div>
+              </div>
+              <div class="block__element block__element_7">
+                <!--  content  -->
+                <div class="block__content">
+                  <div class="title">
+                    Age
+                  </div>
+                  <div class="text" id="about_age">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons__step__3">
+            <div class="prev__step__2__button">
+              Prev
+              <svg
+                width="100"
+                height="50"
+                viewBox="0 0 100 50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  id="step_2_next"
+                  x="0"
+                  y="0"
+                  rx="15"
+                  fill="none"
+                  width="100"
+                  height="50"
+                />
+              </svg>
+            </div>
+            <div class="register__finish__button">
+              Finish
+              <svg
+                width="100"
+                height="50"
+                viewBox="0 0 100 50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  id="step_2_next"
+                  x="0"
+                  y="0"
+                  rx="15"
+                  fill="none"
+                  width="100"
+                  height="50"
+                />
+              </svg>
+            </div>
+          
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../scripts/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,485 @@
+@import "main";
+body {
+    background-color: #2e2e2e;
+}
+.wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.left,
+.right {
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.left {
+    background: url(../images/avatar0.jpg) no-repeat center center;
+    background-size: cover;
+}
+.nav {
+    width: 100%;
+    height: 17%;
+    background-color: transparentize(#2e2e2e, 0.5);
+}
+.nav__row {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.like__counter {
+    width: 18%;
+    .box {
+        min-height: 50px;
+        min-width: 80px;
+        border: 1px solid #ffffff;
+        border-radius: 50px;
+        width: 100%;
+        padding-top: 100%; /* 1:1 Aspect Ratio */
+        position: relative;
+        background: url(../images/hands-and-gestures_1.png) no-repeat;
+        background-position: 80% 40%;
+        background-size: 30%;
+    }
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        color: #ffffff;
+        font-family: "Segoe UI";
+        font-size: 40px;
+        font-weight: 600;
+        margin: 0 30px 0 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ratio16_9 {
+        padding-top: 45.25%;
+    }
+}
+.big__nickname {
+    color: #ffffff;
+    font-family: "Segoe UI";
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.button__back {
+    min-width: 160px;
+    width: 30%;
+    cursor: pointer;
+    .box {
+        min-height: 50px;
+
+        border: 1px solid #ffffff;
+        border-radius: 50px;
+        width: 100%;
+        padding-top: 100%; /* 1:1 Aspect Ratio */
+        position: relative;
+        background: url(../images/arrow.png) no-repeat;
+        background-position: 15% 50%;
+        background-size: 15%;
+    }
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        color: #ffffff;
+        font-family: "Segoe UI";
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0 0 0 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ratio16_9 {
+        padding-top: 27%;
+    }
+}
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .block__1 {
+            width: 35%;
+            color: #ffffff;
+            font-family: "Segoe UI";
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            hr {
+                width: 100%;
+                color: #fff;
+                size: 1px;
+            }
+        }
+        .block__2 {
+            // width: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+                color: #8b8a8a;
+                font-family: "Segoe UI";
+                font-size: 15px;
+                font-weight: 600;
+                margin-right: 15px;
+            }
+            .data {
+                color: #ffffff;
+                font-family: "Segoe UI";
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+    .info {
+        width: 100%; // border: 1px solid red;
+        .block__row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+            .block__element {
+                margin-top: 25px;
+                text-align: justify;
+                .title {
+                    color: #8b8a8a;
+                    font-family: "Segoe UI";
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+                .text {
+                    color: #ffffff;
+                    font-family: "Segoe UI";
+                    font-size: 17px;
+                    font-weight: 400;
+                }
+            }
+            .block__element_1 {
+                flex: 0 1 100%;
+            }
+            .block__element_2,
+            .block__element_3,
+            .block__element_4,
+            .block__element_5,
+            .block__element_6,
+            .block__element_7 {
+                flex: 0 1 50%;
+                .text {
+                    color: #ffffff;
+                    font-family: "Segoe UI";
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 23px;
+                }
+            }
+            .block__element_3,
+            .block__element_5,
+            .block__element_7 {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .foto {
+        width: 100%;
+        .title {
+            color: #8b8a8a;
+            font-family: "Segoe UI";
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .foto__block {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .foto {
+            width: 140px;
+            height: 140px;
+            margin: 15px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .alb__btn {
+            width: 100%;
+            height: 30px;
+        }
+        .album {
+            position: relative;
+            float: right;
+            padding-right: 50px;
+            color: #ffffff;
+            font-family: "Segoe UI";
+            font-size: 20px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .line {
+            width: 35%;
+        }
+    }
+    %button_svg {
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        position: relative;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: "Segoe UI";
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .buttons {
+        width: 40%;
+        display: flex;
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        svg rect {
+            stroke: #797979;
+            stroke-width: 3;
+            transition: 0.8s;
+            stroke-dasharray: 300, 0;
+        }
+        .write__button {
+            @extend %button_svg;
+        }
+        .write__button:hover svg rect {
+            stroke: blue;
+            stroke-width: 5;
+            stroke-dasharray: 5, 5;
+            stroke-dashoffset: 0;
+        }
+        .write__button:hover {
+            color: rgb(54, 54, 228);
+        }
+        .like__button {
+            @extend %button_svg;
+            background: url(../images/hands-and-gestures.png) no-repeat;
+            background-position: 85% 30%;
+            background-size: 25%;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .like__button:hover svg rect {
+            stroke: pink;
+            stroke-width: 5;
+            stroke-dasharray: 5, 5;
+            stroke-dashoffset: 0;
+        }
+        .like__button:hover {
+            color: pink;
+        }
+    }
+}
+// @media (max-width: 1905px) {//1883-1905=22   1134
+//     .right{
+//         .content{
+//             height: 98%;
+//         }
+//     }
+
+// }
+@media (max-width: 1905px) {
+    .left,
+    .right {
+        width: 100%;
+    }
+    .left {
+        height: 60%;
+        .nav {
+            height: 25%;
+        }
+    }
+    .like__counter {
+        width: 12%;
+    }
+    .big__nickname {
+        font-size: 30px;
+    }
+    .button__back {
+        min-width: 160px;
+        width: 15%;
+    }
+    .right {
+        .foto {
+            .foto__block {
+                justify-content: space-between;
+            }
+            .foto {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}
+@media (max-width: 1560px) {
+    .big__nickname {
+        font-size: 25px;
+    }
+    .button__back {
+        min-width: 160px;
+        width: 15%;
+    }
+    .right {
+        .foto {
+            .foto {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}
+@media (max-width: 1280px) {
+    .like__counter {
+        width: 18%;
+    }
+    .right {
+        .foto {
+            .foto__block {
+                justify-content: center;
+            }
+            .foto {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}
+@media (max-width: 920px) {
+    .left {
+        .nav {
+            height: 30%;
+        }
+    }
+    .big__nickname {
+        font-size: 20px;
+    }
+    .button__back {
+        min-width: 160px;
+        width: 10%;
+        font-size: 12px;
+        cursor: pointer;
+        .box {
+            min-height: 20px;
+        }
+    }
+    .right {
+        .foto {
+            .foto__block {
+                a {
+                    pointer-events: none;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    .left {
+        .nav {
+            height: 20%;
+        }
+        .big__nickname {
+            display: none;
+        }
+        .like__counter {
+           
+            .content {
+               
+                font-size: 30px;
+                font-weight: 600;
+                
+            }
+           
+        }
+    }
+    .right {
+        .content{
+          
+            .buttons{
+                width: 100%;
+            }
+        }
+}
+@media (max-width: 600px) {
+    .like__counter {
+        width: 28%;
+    }
+    .right {
+        .foto {
+            .foto {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+
+    .right {
+        .content{
+            .header{
+                flex-direction: column;
+                
+            }
+        }
+        .info {
+            .block__row {
+                .block__element_1,
+                .block__element_2,
+                .block__element_3,
+                .block__element_4,
+                .block__element_5,
+                .block__element_6,
+                .block__element_7 {
+                    flex: 0 1 100%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+}

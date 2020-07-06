@@ -1,0 +1,793 @@
+@charset "UTF-8";
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a,
+a:active,
+a:focus {
+  outline: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:active,
+textarea:active {
+  outline: none;
+}
+
+:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+textarea {
+  resize: horizontal;
+}
+
+.nav__btn, .input__style, .mess__err, .mess__good, .login__button, .next__step__2__button, .register__step__2 .prev__step__1__button, .register__step__2 .go__foto, .register__step__2 .next__step__3__button, .register__step__3 .prev__step__2__button, .register__step__3 .register__finish__button {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+svg rect {
+  stroke: #797979;
+  stroke-width: 1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  stroke-dasharray: 300, 0;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2e2e2e;
+}
+
+.login__contanier {
+  width: 690px;
+  height: 360px;
+  background-color: #1f1f1f;
+  border-radius: 32px;
+  display: none;
+}
+
+.nav {
+  width: 84%;
+  height: 60px;
+  padding-top: 35px;
+  margin: 0 auto;
+}
+
+.nav__btn {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.nav__btn a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 1s linear;
+  transition: color 1s linear;
+}
+
+#go_register_block:hover {
+  color: #edfd0a;
+}
+
+hr {
+  color: white;
+  width: 96%;
+}
+
+.login__form {
+  width: 80%;
+  height: 230px;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.input__style {
+  width: 80%;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #797979;
+  background-color: #1f1f1f;
+  color: #6c6c6c;
+  padding-left: 4%;
+}
+
+.input__style:focus {
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.messg__area {
+  width: 100%;
+  height: 20px;
+  text-align: left;
+  margin: 10px;
+}
+
+.mess__err {
+  display: none;
+  font-size: 16px;
+  margin-left: 90px;
+  color: #f70000;
+  text-shadow: 0 0 20px rgba(247, 0, 0, 0.8);
+}
+
+.mess__good {
+  display: none;
+  font-size: 16px;
+  margin-left: 90px;
+  color: #73ff4a;
+}
+
+.login__button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.login__button svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.login__button svg rect {
+  stroke: #797979;
+  stroke-width: 1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  stroke-dasharray: 300, 0;
+}
+
+.login__button:hover svg rect {
+  stroke-width: 3;
+  stroke-dasharray: 15, 15;
+  stroke-dashoffset: 7;
+}
+
+.register__block {
+  display: none;
+}
+
+#go_login:hover {
+  color: #edfd0a;
+}
+
+.register__step__1 {
+  /* Style for "Rectangle" */
+  width: 690px;
+  height: 572px;
+  background-color: #1f1f1f;
+  border-radius: 30px;
+}
+
+.register__step__1 .number__steps {
+  width: 84%;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.register__step__1 .number__steps .steps__hr {
+  width: 43%;
+  float: left;
+  margin-top: 14px;
+  color: #707070;
+}
+
+.register__step__1 .number__steps .circle:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  float: left;
+  background-color: #ffffff;
+}
+
+.register__step__1 .number__steps .circle:nth-child(3) {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  border: 1px solid #707070;
+  margin-top: 5px;
+}
+
+.register__step__1 .number__steps .circle:nth-child(5) {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  border: 1px solid #707070;
+  margin-top: 5px;
+}
+
+.register__step__1 .small__circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  margin-top: 5px;
+}
+
+.register__step__1 .line_1 {
+  width: 230px;
+  height: 30px;
+  float: left;
+}
+
+.register__step__1 .steps__line {
+  width: 230px;
+  color: #707070;
+  margin-top: 15px;
+}
+
+.register__step__1 .name__steps {
+  position: absolute;
+}
+
+.register__step__1 .name__step__1 {
+  left: 0;
+}
+
+.register__step__1 .name__step__1 .namestp,
+.register__step__1 .name__step__1 .nmbstp {
+  color: #e3e3e3;
+}
+
+.register__step__1 .name__step__2 {
+  left: 120px;
+}
+
+.register__step__1 .name__step__3 {
+  left: 240px;
+}
+
+.name__step__1,
+.name__step__2,
+.name__step__3 {
+  position: relative;
+  width: 150px;
+  height: 60px;
+  float: left;
+}
+
+.nmbstp {
+  width: 150px;
+  height: 28px;
+  color: #6c6c6c;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+  text-align: center;
+}
+
+.namestp {
+  width: 150px;
+  height: 23px;
+  color: #6c6c6c;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 23px;
+  text-align: center;
+}
+
+.input__block {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 75px;
+  text-align: center;
+}
+
+.green__div {
+  width: 25px;
+  height: 50px;
+  background-color: #73ff4a;
+  position: absolute;
+  margin-left: 50px;
+  border-radius: 1000px 0 0 1000px;
+  display: none;
+  -webkit-box-shadow: 0 0 50px rgba(115, 255, 74, 0.8);
+          box-shadow: 0 0 50px rgba(115, 255, 74, 0.8);
+}
+
+.next__step__2__button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.next__step__2__button:hover svg rect {
+  stroke-width: 3;
+  stroke-dasharray: 5, 5;
+  stroke-dashoffset: 0;
+}
+
+.register__step__2 {
+  width: 1459px;
+  height: 650px;
+  background-color: #1f1f1f;
+  border-radius: 30px;
+  display: none;
+}
+
+.register__step__2 .nav {
+  width: 70%;
+  height: 60px;
+  padding-top: 35px;
+  margin: 0 auto;
+}
+
+.register__step__2 .number__steps {
+  width: 70%;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.register__step__2 .number__steps .steps__hr {
+  width: 46.5%;
+  float: left;
+  margin-top: 14px;
+  color: #707070;
+}
+
+.register__step__2 .number__steps .circle:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  float: left;
+  background-color: #ffffff;
+}
+
+.register__step__2 .number__steps .circle:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  border: 1px solid #707070;
+  margin-top: 5px;
+}
+
+.register__step__2 .number__steps .circle:nth-child(5) {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  border: 1px solid #707070;
+  margin-top: 5px;
+}
+
+.register__step__2 .name__steps {
+  position: absolute;
+  width: 60%;
+  height: 60px;
+}
+
+.register__step__2 .name__step__1 {
+  left: 157px;
+}
+
+.register__step__2 .name__step__2 {
+  left: 508px;
+}
+
+.register__step__2 .name__step__2 .namestp,
+.register__step__2 .name__step__2 .nmbstp {
+  color: #e3e3e3;
+}
+
+.register__step__2 .name__step__3 {
+  left: 855px;
+}
+
+.register__step__2 .information__block__row {
+  width: 100%;
+  height: 300px;
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.register__step__2 .one__information__block__column {
+  height: 300px;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.register__step__2 .one__area__item {
+  width: 100%;
+  height: 100px;
+  background-color: #1f1f1f;
+  text-align: center;
+}
+
+.register__step__2 .one__area {
+  width: 90%;
+  height: 90px;
+  border-radius: 30px;
+  border: 1px solid #797979;
+  background-color: #1f1f1f;
+  overflow: auto;
+  resize: none;
+  padding: 10px 15px 5px 20px;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.register__step__2 .one__area:focus {
+  -webkit-box-shadow: 0 0 20px #707070;
+          box-shadow: 0 0 20px #707070;
+}
+
+.register__step__2 .one__information__block__column:nth-child(3) .one__area__item {
+  height: 290px;
+}
+
+.register__step__2 .one__information__block__column:nth-child(3) .one__area {
+  height: 290px;
+}
+
+.register__step__2 .buttons__step__2 {
+  margin: 0 auto;
+  width: 90%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.register__step__2 .prev__step__1__button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.register__step__2 .prev__step__1__button:hover svg rect {
+  stroke: #f30000;
+  stroke-width: 3;
+  stroke-dasharray: 5, 5;
+  stroke-dashoffset: 0;
+}
+
+.register__step__2 .go__foto {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.register__step__2 .go__foto:hover svg rect {
+  stroke-width: 3;
+  stroke-dasharray: 5, 5;
+  stroke-dashoffset: 0;
+}
+
+.register__step__2 .next__step__3__button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.register__step__2 .next__step__3__button:hover svg rect {
+  stroke: greenyellow;
+  stroke-width: 3;
+  stroke-dasharray: 5, 5;
+  stroke-dashoffset: 0;
+}
+
+.register__step__3 {
+  width: 774px;
+  height: 806px;
+  background-color: #1f1f1f;
+  border-radius: 30px;
+  display: none;
+}
+
+.register__step__3 .number__steps {
+  width: 70%;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.register__step__3 .number__steps .steps__hr {
+  width: 43%;
+  float: left;
+  margin-top: 14px;
+  color: #707070;
+}
+
+.register__step__3 .number__steps .circle:nth-child(5) {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  float: left;
+  background-color: #ffffff;
+}
+
+.register__step__3 .number__steps .circle:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  border: 1px solid #707070;
+  margin-top: 5px;
+}
+
+.register__step__3 .number__steps .circle:nth-child(3) {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  border: 1px solid #707070;
+  margin-top: 5px;
+}
+
+.register__step__3 .name__steps {
+  width: 90%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.register__step__3 .name__step__1 {
+  left: 10px;
+}
+
+.register__step__3 .name__step__3 {
+  left: 225px;
+}
+
+.register__step__3 .name__step__3 .namestp,
+.register__step__3 .name__step__3 .nmbstp {
+  color: #e3e3e3;
+}
+
+.register__step__3 .name__step__2 {
+  left: 115px;
+}
+
+.register__step__3 .finish__content {
+  width: 80%;
+  height: 470px;
+  margin: 0 auto;
+  /* flex-элемент */
+}
+
+.register__step__3 .finish__content .block__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.register__step__3 .finish__content .block__element {
+  margin-top: 20px;
+}
+
+.register__step__3 .finish__content .block__element_1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.register__step__3 .finish__content .block__element_2,
+.register__step__3 .finish__content .block__element_3,
+.register__step__3 .finish__content .block__element_4,
+.register__step__3 .finish__content .block__element_5,
+.register__step__3 .finish__content .block__element_6,
+.register__step__3 .finish__content .block__element_7 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.register__step__3 .finish__content .block__content .title {
+  color: #8b8a8a;
+  font-family: "Segoe UI";
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.register__step__3 .finish__content .block__content .text {
+  width: 90%;
+  text-align: justify;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.register__step__3 .finish__content .block__content .big_text {
+  width: 100%;
+}
+
+.register__step__3 .finish__content .block__element:nth-child(odd) .text {
+  width: 100%;
+}
+
+.register__step__3 .buttons__step__3 {
+  margin: 30px auto;
+  width: 90%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.register__step__3 .prev__step__2__button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.register__step__3 .prev__step__2__button:hover svg rect {
+  stroke: red;
+  stroke-width: 3;
+  stroke-dasharray: 5, 5;
+  stroke-dashoffset: 0;
+}
+
+.register__step__3 .register__finish__button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.register__step__3 .register__finish__button:hover svg rect {
+  stroke: greenyellow;
+  stroke-width: 3;
+  stroke-dasharray: 5, 5;
+  stroke-dashoffset: 0;
+}
+
+@media (max-width: 729px) {
+  .nav__btn, .input__style, .mess__err, .button {
+    color: #ffffff;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  .login__block {
+    width: 90%;
+  }
+  .mess__err {
+    color: red;
+    margin-left: 12%;
+  }
+  .button {
+    width: 160px;
+    height: 44px;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav__btn, .input__style, .mess__err, .button {
+    color: #ffffff;
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  .login__block {
+    width: 90%;
+  }
+  .mess__err {
+    color: red;
+    margin-left: 12%;
+  }
+  .case__log__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .button {
+    width: 160px;
+    height: 44px;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,32 @@
+*{
+    border: 1px solid red;
+}
+.wrapper{
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    margin: 0 auto;
+    
+    flex-wrap: wrap;
+}
+.contanier{
+    
+    // max-width: 200px;
+    // width: 30%;
+    // max-height: 300px;
+    display: flex;
+    // flex: 0 1 30%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    // flex-grow: 1;
+}
+.box{
+    width: 90%;
+    // flex: 0 1 30%;
+    border: 1px solid green;
+    text-align: justify;
+    // flex-grow: 1;
+}

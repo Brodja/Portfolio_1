@@ -1,0 +1,654 @@
+@import "main";
+%text_1 {
+    color: #ffffff;
+    font-family: "Segoe UI";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+svg rect {
+    stroke: #797979;
+    stroke-width: 1;
+    transition: 0.8s;
+    stroke-dasharray: 300, 0;
+}
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2e2e2e;
+}
+.login__contanier {
+    width: 690px;
+    height: 360px;
+    background-color: #1f1f1f;
+    border-radius: 32px;
+    display: none;
+}
+.nav {
+    width: 84%;
+    height: 60px;
+    padding-top: 35px;
+    margin: 0 auto;
+}
+.nav__btn {
+    width: 50%;
+    float: left;
+    text-align: center;
+    @extend %text_1;
+}
+.nav__btn a {
+    text-decoration: none;
+    color: white;
+    transition: color 1s linear;
+}
+#go_register_block:hover {
+    color: #edfd0a;
+}
+hr {
+    color: white;
+    width: 96%;
+}
+
+.login__form {
+    width: 80%;
+    height: 230px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.input__style {
+    width: 80%;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #797979;
+    background-color: #1f1f1f;
+    @extend %text_1;
+    color: #6c6c6c;
+    padding-left: 4%;
+}
+.input__style:focus {
+    box-shadow: 0 0 10px rgba($color: #ffffff, $alpha: 0.8);
+}
+.messg__area {
+    width: 100%;
+    height: 20px;
+    text-align: left;
+    margin: 10px;
+}
+.mess__err {
+    display: none;
+    font-size: 16px;
+    margin-left: 90px;
+    @extend %text_1;
+    color: #f70000;
+    text-shadow: 0 0 20px rgba($color: #f70000, $alpha: 0.8);
+}
+.mess__good {
+    display: none;
+    font-size: 16px;
+    margin-left: 90px;
+    @extend %text_1;
+    color: #73ff4a;
+}
+.login__button {
+    @extend %text_1;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px auto;
+    position: relative;
+    cursor: pointer;
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    svg rect {
+        stroke: #797979;
+        stroke-width: 1;
+        transition: 0.8s;
+        stroke-dasharray: 300, 0;
+    }
+}
+.login__button:hover svg rect {
+    stroke-width: 3;
+    stroke-dasharray: 15, 15;
+    stroke-dashoffset: 7;
+}
+// регистрация регистрация регистрация регистрация регистрация регистрация регистрация регистрация регистрация регистрация регистрация регистрация
+.register__block {
+    display: none;
+}
+@mixin circle($w) {
+    width: $w;
+    height: $w;
+    border-radius: 25px;
+    float: left;
+}
+#go_login:hover {
+    color: #edfd0a;
+    // text-shadow: 0 0 20px #fd9c0a;
+}
+.register__step__1 {
+    /* Style for "Rectangle" */
+    width: 690px;
+    height: 572px;
+    background-color: #1f1f1f;
+    border-radius: 30px;
+
+    .number__steps {
+        width: 84%;
+        height: 30px;
+        margin: 0 auto;
+        margin-top: 20px;
+        .steps__hr {
+            width: 43%;
+            float: left;
+            margin-top: 14px;
+            color: #707070;
+        }
+        .circle:nth-child(1) {
+            @include circle(30px);
+            background-color: #ffffff;
+        }
+        .circle:nth-child(3) {
+            @include circle(20px);
+            border: 1px solid #707070;
+            margin-top: 5px;
+        }
+        .circle:nth-child(5) {
+            @include circle(20px);
+            border: 1px solid #707070;
+            margin-top: 5px;
+        }
+    }
+
+    .small__circle {
+        display: inline-block;
+        @include circle(20px);
+        margin-top: 5px;
+    }
+    .line_1 {
+        width: 230px;
+        height: 30px;
+        float: left;
+    }
+    .steps__line {
+        width: 230px;
+        color: #707070;
+        margin-top: 15px;
+    }
+    .name__steps {
+        position: absolute;
+    }
+    .name__step__1 {
+        left: 0;
+        .namestp,
+        .nmbstp {
+            color: #e3e3e3;
+        }
+    }
+    .name__step__2 {
+        left: 120px;
+    }
+    .name__step__3 {
+        left: 240px;
+    }
+}
+
+.name__step__1,
+.name__step__2,
+.name__step__3 {
+    position: relative;
+    width: 150px;
+    height: 60px;
+    float: left;
+}
+
+%nmbstpP {
+    width: 150px;
+    height: 28px;
+    color: #6c6c6c;
+    font-family: "Segoe UI";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    text-align: center;
+}
+%namestpP {
+    width: 150px;
+    height: 23px;
+    color: #6c6c6c;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    text-align: center;
+}
+.namestp {
+    @extend %namestpP;
+}
+.nmbstp {
+    @extend %nmbstpP;
+}
+.input__block {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 75px;
+    text-align: center;
+}
+.green__div {
+    width: 25px;
+    height: 50px;
+    background-color: #73ff4a;
+    position: absolute;
+    margin-left: 50px;
+    border-radius: 1000px 0 0 1000px;
+    display: none;
+    box-shadow: 0 0 50px rgba($color: #73ff4a, $alpha: 0.8);
+}
+
+.next__step__2__button {
+    @extend %text_1;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px auto;
+    position: relative;
+    cursor: pointer;
+    
+}
+.next__step__2__button:hover svg rect {
+    stroke-width: 3;
+    stroke-dasharray: 5, 5;
+    stroke-dashoffset: 0;
+}
+//  ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА ШАГ ДВА
+.register__step__2 {
+    width: 1459px;
+    height: 650px;
+    background-color: #1f1f1f;
+    border-radius: 30px;
+    display: none;
+    .nav {
+        width: 70%;
+        height: 60px;
+        padding-top: 35px;
+        margin: 0 auto;
+    }
+
+    .number__steps {
+        width: 70%;
+        height: 30px;
+        margin: 0 auto;
+        margin-top: 20px;
+        .steps__hr {
+            width: 46.5%;
+            float: left;
+            margin-top: 14px;
+            color: #707070;
+        }
+        .circle:nth-child(3) {
+            @include circle(30px);
+            background-color: #ffffff;
+        }
+        .circle:nth-child(1) {
+            @include circle(20px);
+            border: 1px solid #707070;
+            margin-top: 5px;
+        }
+        .circle:nth-child(5) {
+            @include circle(20px);
+            border: 1px solid #707070;
+            margin-top: 5px;
+        }
+    }
+
+    .name__steps {
+        position: absolute;
+        width: 60%;
+        height: 60px;
+    }
+    .name__step__1 {
+        left: 157px;
+    }
+    .name__step__2 {
+        left: 508px;
+        .namestp,
+        .nmbstp {
+            color: #e3e3e3;
+        }
+    }
+    .name__step__3 {
+        left: 855px;
+    }
+
+    .information__block__row {
+        width: 100%;
+        height: 300px;
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .one__information__block__column {
+        height: 300px;
+        flex-basis: 30%;
+    }
+    .one__area__item {
+        width: 100%;
+        height: 100px;
+        background-color: #1f1f1f;
+        text-align: center;
+    }
+    .one__area {
+        width: 90%;
+        height: 90px;
+        border-radius: 30px;
+        border: 1px solid #797979;
+        background-color: #1f1f1f;
+        overflow: auto;
+        resize: none;
+        padding: 10px 15px 5px 20px;
+        color: #ffffff;
+        font-family: "Segoe UI";
+        font-size: 17px;
+        font-weight: 400;
+    }
+    .one__area:focus {
+        box-shadow: 0 0 20px #707070;
+    }
+    .one__information__block__column:nth-child(3) {
+        .one__area__item {
+            height: 290px;
+        }
+        .one__area {
+            height: 290px;
+        }
+    }
+    .buttons__step__2 {
+        margin: 0 auto;
+        width: 90%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .prev__step__1__button {
+        @extend %text_1;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        position: relative;
+        cursor: pointer;
+    }
+    .prev__step__1__button:hover svg rect {
+        stroke: #f30000;
+        stroke-width: 3;
+        stroke-dasharray: 5, 5;
+        stroke-dashoffset: 0;
+    }
+
+    .go__foto {
+        @extend %text_1;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        position: relative;
+        cursor: pointer;
+    }
+    .go__foto:hover svg rect {
+        stroke-width: 3;
+        stroke-dasharray: 5, 5;
+        stroke-dashoffset: 0;
+    }
+    .next__step__3__button {
+        @extend %text_1;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        position: relative;
+        cursor: pointer;
+    }
+    .next__step__3__button:hover svg rect {
+        stroke: greenyellow;
+        stroke-width: 3;
+        stroke-dasharray: 5, 5;
+        stroke-dashoffset: 0;
+    }
+}
+//ШАГ ТРИ ---------------------------------------------------------------------------------------------------------------------
+.register__step__3 {
+    width: 774px;
+    height: 806px;
+    background-color: #1f1f1f;
+    border-radius: 30px;
+    display: none;
+    .number__steps {
+        width: 70%;
+        height: 30px;
+        margin: 0 auto;
+        margin-top: 20px;
+        .steps__hr {
+            width: 43%;
+            float: left;
+            margin-top: 14px;
+            color: #707070;
+        }
+        .circle:nth-child(5) {
+            @include circle(30px);
+            background-color: #ffffff;
+        }
+        .circle:nth-child(1) {
+            @include circle(20px);
+            border: 1px solid #707070;
+            margin-top: 5px;
+        }
+        .circle:nth-child(3) {
+            @include circle(20px);
+            border: 1px solid #707070;
+            margin-top: 5px;
+        }
+    }
+
+    .name__steps {
+        // position: absolute;
+        width: 90%;
+        height: 60px;
+        margin: 0 auto;
+    }
+    .name__step__1 {
+        left: 10px;
+    }
+    .name__step__3 {
+        left: 225px;
+        .namestp,
+        .nmbstp {
+            color: #e3e3e3;
+        }
+    }
+    .name__step__2 {
+        left: 115px;
+    }
+    .finish__content {
+        width: 80%;
+        height: 470px;
+        margin: 0 auto;
+        .block__row {
+            // border: 2px solid #ece89d;
+            display: flex;
+            flex-wrap: wrap;
+            
+           
+        }
+        /* flex-элемент */
+        .block__element {
+            // border: 5px solid #5e5373;
+            margin-top: 20px;
+            
+        }
+
+        .block__element_1 {
+            flex: 0 1 100%;
+        }
+
+        .block__element_2,
+        .block__element_3,
+        .block__element_4,
+        .block__element_5,
+        .block__element_6,
+        .block__element_7 {
+            flex: 0 1 50%;
+            
+        }
+        .block__content {
+            // background-color: #18b5a4; /* плюс прочие стили для текста, отступы */
+            .title {
+                color: #8b8a8a;
+                font-family: "Segoe UI";
+                font-size: 15px;
+                font-weight: 600;
+                margin-top: 10px;
+            }
+            .text {
+                width: 90%;
+                // height: 70px;
+                text-align: justify;
+                color: #ffffff;
+                font-family: "Segoe UI";
+                font-size: 17px;
+                font-weight: 400;
+            }
+            .big_text{
+                width: 100%;
+            }
+        }
+        .block__element:nth-child(odd){
+            .text{
+                width: 100%;
+            }
+        }
+       
+    }
+    .buttons__step__3{
+        margin: 30px auto;
+        width: 90%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+    .prev__step__2__button {
+        @extend %text_1;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        position: relative;
+        cursor: pointer;
+    }
+    .prev__step__2__button:hover svg rect {
+        stroke: red;
+        stroke-width: 3;
+        stroke-dasharray: 5, 5;
+        stroke-dashoffset: 0;
+    }
+    .register__finish__button {
+        @extend %text_1;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        position: relative;
+        cursor: pointer;
+    }
+    .register__finish__button:hover svg rect {
+        stroke: greenyellow;
+        stroke-width: 3;
+        stroke-dasharray: 5, 5;
+        stroke-dashoffset: 0;
+    }
+}
+@media (max-width: 729px) {
+    %text_2 {
+        color: #ffffff;
+        font-family: "Segoe UI";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    .login__block {
+        width: 90%;
+    }
+    .nav__btn,
+    .input__style {
+        @extend %text_2;
+    }
+    .mess__err {
+        @extend %text_2;
+        color: red;
+        margin-left: 12%;
+    }
+    .button {
+        width: 160px;
+        height: 44px;
+        @extend %text_2;
+        margin-right: 10%;
+    }
+}
+@media (max-width: 500px) {
+    %text_3 {
+        color: #ffffff;
+        font-family: "Segoe UI";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    .login__block {
+        width: 90%;
+    }
+    .nav__btn,
+    .input__style {
+        @extend %text_3;
+    }
+    .mess__err {
+        @extend %text_3;
+        color: red;
+        margin-left: 12%;
+    }
+    .case__log__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .button {
+        width: 160px;
+        height: 44px;
+        @extend %text_3;
+        margin-right: 0;
+    }
+}

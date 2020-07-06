@@ -1,0 +1,603 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a,
+a:active,
+a:focus {
+  outline: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:active,
+textarea:active {
+  outline: none;
+}
+
+:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+textarea {
+  resize: horizontal;
+}
+
+body {
+  background-color: #2e2e2e;
+}
+
+.wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.left,
+.right {
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.left {
+  background: url(../images/avatar0.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.nav {
+  width: 100%;
+  height: 17%;
+  background-color: rgba(46, 46, 46, 0.5);
+}
+
+.nav__row {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item {
+  width: 75%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.like__counter {
+  width: 18%;
+}
+
+.like__counter .box {
+  min-height: 50px;
+  min-width: 80px;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  width: 100%;
+  padding-top: 100%;
+  /* 1:1 Aspect Ratio */
+  position: relative;
+  background: url(../images/hands-and-gestures_1.png) no-repeat;
+  background-position: 80% 40%;
+  background-size: 30%;
+}
+
+.like__counter .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 30px 0 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.like__counter .ratio16_9 {
+  padding-top: 45.25%;
+}
+
+.big__nickname {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.button__back {
+  min-width: 160px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.button__back .box {
+  min-height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  width: 100%;
+  padding-top: 100%;
+  /* 1:1 Aspect Ratio */
+  position: relative;
+  background: url(../images/arrow.png) no-repeat;
+  background-position: 15% 50%;
+  background-size: 15%;
+}
+
+.button__back .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 0 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button__back .ratio16_9 {
+  padding-top: 27%;
+}
+
+.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right .content {
+  width: 90%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.right .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.right .header .block__1 {
+  width: 35%;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.right .header .block__1 hr {
+  width: 100%;
+  color: #fff;
+  size: 1px;
+}
+
+.right .header .block__2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.right .header .block__2 .text {
+  color: #8b8a8a;
+  font-family: "Segoe UI";
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.right .header .block__2 .data {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.right .info {
+  width: 100%;
+}
+
+.right .info .block__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.right .info .block__row .block__element {
+  margin-top: 25px;
+  text-align: justify;
+}
+
+.right .info .block__row .block__element .title {
+  color: #8b8a8a;
+  font-family: "Segoe UI";
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.right .info .block__row .block__element .text {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.right .info .block__row .block__element_1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.right .info .block__row .block__element_2,
+.right .info .block__row .block__element_3,
+.right .info .block__row .block__element_4,
+.right .info .block__row .block__element_5,
+.right .info .block__row .block__element_6,
+.right .info .block__row .block__element_7 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.right .info .block__row .block__element_2 .text,
+.right .info .block__row .block__element_3 .text,
+.right .info .block__row .block__element_4 .text,
+.right .info .block__row .block__element_5 .text,
+.right .info .block__row .block__element_6 .text,
+.right .info .block__row .block__element_7 .text {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+.right .info .block__row .block__element_3,
+.right .info .block__row .block__element_5,
+.right .info .block__row .block__element_7 {
+  padding: 0 10px;
+}
+
+.right .foto {
+  width: 100%;
+}
+
+.right .foto .title {
+  color: #8b8a8a;
+  font-family: "Segoe UI";
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.right .foto .foto__block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.right .foto .foto {
+  width: 140px;
+  height: 140px;
+  margin: 15px;
+}
+
+.right .foto .foto img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.right .foto .alb__btn {
+  width: 100%;
+  height: 30px;
+}
+
+.right .foto .album {
+  position: relative;
+  float: right;
+  padding-right: 50px;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.right .foto .line {
+  width: 35%;
+}
+
+.right .buttons .write__button, .right .buttons .like__button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.right .buttons {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.right .buttons svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.right .buttons svg rect {
+  stroke: #797979;
+  stroke-width: 3;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  stroke-dasharray: 300, 0;
+}
+
+.right .buttons .write__button:hover svg rect {
+  stroke: blue;
+  stroke-width: 5;
+  stroke-dasharray: 5, 5;
+  stroke-dashoffset: 0;
+}
+
+.right .buttons .write__button:hover {
+  color: #3636e4;
+}
+
+.right .buttons .like__button {
+  background: url(../images/hands-and-gestures.png) no-repeat;
+  background-position: 85% 30%;
+  background-size: 25%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.right .buttons .like__button:hover svg rect {
+  stroke: pink;
+  stroke-width: 5;
+  stroke-dasharray: 5, 5;
+  stroke-dashoffset: 0;
+}
+
+.right .buttons .like__button:hover {
+  color: pink;
+}
+
+@media (max-width: 1905px) {
+  .left,
+  .right {
+    width: 100%;
+  }
+  .left {
+    height: 60%;
+  }
+  .left .nav {
+    height: 25%;
+  }
+  .like__counter {
+    width: 12%;
+  }
+  .big__nickname {
+    font-size: 30px;
+  }
+  .button__back {
+    min-width: 160px;
+    width: 15%;
+  }
+  .right .foto .foto__block {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .right .foto .foto {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 1560px) {
+  .big__nickname {
+    font-size: 25px;
+  }
+  .button__back {
+    min-width: 160px;
+    width: 15%;
+  }
+  .right .foto .foto {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .like__counter {
+    width: 18%;
+  }
+  .right .foto .foto__block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .right .foto .foto {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 920px) {
+  .left .nav {
+    height: 30%;
+  }
+  .big__nickname {
+    font-size: 20px;
+  }
+  .button__back {
+    min-width: 160px;
+    width: 10%;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .button__back .box {
+    min-height: 20px;
+  }
+  .right .foto .foto__block a {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+@media (max-width: 800px) {
+  .left .nav {
+    height: 20%;
+  }
+  .left .big__nickname {
+    display: none;
+  }
+  .left .like__counter .content {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .right .content .buttons {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) and (max-width: 600px) {
+  .like__counter {
+    width: 28%;
+  }
+  .right .foto .foto {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 800px) and (max-width: 420px) {
+  .right .content .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .right .info .block__row .block__element_1,
+  .right .info .block__row .block__element_2,
+  .right .info .block__row .block__element_3,
+  .right .info .block__row .block__element_4,
+  .right .info .block__row .block__element_5,
+  .right .info .block__row .block__element_6,
+  .right .info .block__row .block__element_7 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    padding: 0;
+  }
+}
