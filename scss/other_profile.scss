@@ -17,7 +17,7 @@ body {
     position: relative;
 }
 .left {
-    background: url(../images/avatar0.jpg) no-repeat center center;
+    background: url(../images/foto3_0.jpg) no-repeat center center;
     background-size: cover;
 }
 .nav {
@@ -321,6 +321,7 @@ body {
 //     }
 
 // }
+
 @media (max-width: 1905px) {
     .left,
     .right {
@@ -483,3 +484,12 @@ body {
     }
 }
 }
+@media (orientation: landscape) {
+    
+    .left {
+        height: 50%;
+        .nav {
+            height: 40%;
+        }
+    }
+  }

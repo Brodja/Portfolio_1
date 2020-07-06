@@ -65,7 +65,7 @@ body {
 }
 
 .left {
-  background: url(../images/avatar0.jpg) no-repeat center center;
+  background: url(../images/foto3_0.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -599,5 +599,14 @@ body {
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
     padding: 0;
+  }
+}
+
+@media (orientation: landscape) {
+  .left {
+    height: 50%;
+  }
+  .left .nav {
+    height: 40%;
   }
 }
