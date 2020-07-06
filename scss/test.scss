@@ -1,32 +1,59 @@
-*{
-    border: 1px solid red;
+* {
+    box-sizing: border-box;
 }
-.wrapper{
-    width: 1000px;
+@mixin circle($w) {
+    width: $w;
+    height: $w;
+    border-radius: 25px;
+    float: left;
+}
+.wrapper {
+    width: 70%;
     height: 1000px;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-around;
     margin: 0 auto;
-    
-    flex-wrap: wrap;
 }
-.contanier{
-    
-    // max-width: 200px;
-    // width: 30%;
-    // max-height: 300px;
-    display: flex;
-    // flex: 0 1 30%;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    // flex-grow: 1;
-}
-.box{
+.nav {
     width: 90%;
-    // flex: 0 1 30%;
-    border: 1px solid green;
-    text-align: justify;
-    // flex-grow: 1;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+}
+.el_2,
+.el_4 {
+    flex-grow: 1;
+}
+.el_1,
+.el_3,
+.el_5 {
+    .block__content {
+        width: 2px;
+        height: 90px;
+        columns: 10px 1;
+    }
+}
+.circle_big {
+    @include circle(30px);
+    background-color: red;
+    z-index: 3;
+    position: relative;
+}
+.circle_small {
+    @include circle(20px);
+    border: 1px solid #7c6f6f;
+    margin-top: 5px;
+    background-color: #22ff22;
+}
+.name {
+    width: 120px;
+    margin-left: -50px;
+    margin-top: 30px;
+}
+.title, .text{
+    text-align: center;
+}
+.line{
+color: black;
+size: 2px;
+margin-top: 15px;
+z-index: 1;
 }

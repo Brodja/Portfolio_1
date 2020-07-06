@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -53,6 +52,28 @@ textarea {
   line-height: 23px;
 }
 
+.steps .title {
+  width: 150px;
+  height: 28px;
+  color: #6c6c6c;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+  text-align: center;
+}
+
+.steps .text {
+  width: 150px;
+  height: 23px;
+  color: #6c6c6c;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 23px;
+  text-align: center;
+}
+
 svg {
   position: absolute;
   top: 0;
@@ -61,7 +82,7 @@ svg {
 
 svg rect {
   stroke: #797979;
-  stroke-width: 1;
+  stroke-width: 3;
   -webkit-transition: 0.8s;
   transition: 0.8s;
   stroke-dasharray: 300, 0;
@@ -176,20 +197,6 @@ hr {
   cursor: pointer;
 }
 
-.login__button svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.login__button svg rect {
-  stroke: #797979;
-  stroke-width: 1;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-  stroke-dasharray: 300, 0;
-}
-
 .login__button:hover svg rect {
   stroke-width: 3;
   stroke-dasharray: 15, 15;
@@ -204,6 +211,82 @@ hr {
   color: #edfd0a;
 }
 
+.steps {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.steps .element_2,
+.steps .element_4 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.steps .element_1 .content,
+.steps .element_3 .content,
+.steps .element_5 .content {
+  width: 2px;
+  height: 90px;
+  -webkit-columns: 10px 1;
+          columns: 10px 1;
+}
+
+.steps .circle {
+  position: relative;
+  z-index: 3;
+}
+
+.steps .element_1 .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  float: left;
+  background-color: #ffffff;
+  margin-left: -14px;
+}
+
+.steps .element_3 .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  border: 1px solid #707070;
+  margin-top: 5px;
+  background-color: #1f1f1f;
+  margin-left: -9px;
+}
+
+.steps .element_5 .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  float: left;
+  border: 1px solid #707070;
+  margin-top: 5px;
+  background-color: #1f1f1f;
+  margin-left: -9px;
+}
+
+.steps .name {
+  width: 150px;
+  margin-left: -74px;
+  margin-top: 30px;
+}
+
+.steps .title, .steps .text {
+  text-align: center;
+}
+
+.steps .steps__hr {
+  margin-top: 12.5px;
+  color: #707070;
+}
+
 .register__step__1 {
   /* Style for "Rectangle" */
   width: 690px;
@@ -212,123 +295,14 @@ hr {
   border-radius: 30px;
 }
 
-.register__step__1 .number__steps {
-  width: 84%;
-  height: 30px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.register__step__1 .number__steps .steps__hr {
-  width: 43%;
-  float: left;
-  margin-top: 14px;
-  color: #707070;
-}
-
-.register__step__1 .number__steps .circle:nth-child(1) {
-  width: 30px;
-  height: 30px;
-  border-radius: 25px;
-  float: left;
-  background-color: #ffffff;
-}
-
-.register__step__1 .number__steps .circle:nth-child(3) {
-  width: 20px;
-  height: 20px;
-  border-radius: 25px;
-  float: left;
-  border: 1px solid #707070;
-  margin-top: 5px;
-}
-
-.register__step__1 .number__steps .circle:nth-child(5) {
-  width: 20px;
-  height: 20px;
-  border-radius: 25px;
-  float: left;
-  border: 1px solid #707070;
-  margin-top: 5px;
-}
-
-.register__step__1 .small__circle {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 25px;
-  float: left;
-  margin-top: 5px;
-}
-
-.register__step__1 .line_1 {
-  width: 230px;
-  height: 30px;
-  float: left;
-}
-
-.register__step__1 .steps__line {
-  width: 230px;
-  color: #707070;
-  margin-top: 15px;
-}
-
-.register__step__1 .name__steps {
-  position: absolute;
-}
-
-.register__step__1 .name__step__1 {
-  left: 0;
-}
-
-.register__step__1 .name__step__1 .namestp,
-.register__step__1 .name__step__1 .nmbstp {
-  color: #e3e3e3;
-}
-
-.register__step__1 .name__step__2 {
-  left: 120px;
-}
-
-.register__step__1 .name__step__3 {
-  left: 240px;
-}
-
-.name__step__1,
-.name__step__2,
-.name__step__3 {
-  position: relative;
-  width: 150px;
-  height: 60px;
-  float: left;
-}
-
-.nmbstp {
-  width: 150px;
-  height: 28px;
-  color: #6c6c6c;
-  font-family: "Segoe UI";
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 23px;
-  text-align: center;
-}
-
-.namestp {
-  width: 150px;
-  height: 23px;
-  color: #6c6c6c;
-  font-family: "Segoe UI";
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 23px;
-  text-align: center;
+.register__step__1 .steps .element_1 .title, .register__step__1 .steps .element_1 .text {
+  color: #ffffff;
 }
 
 .input__block {
   width: 80%;
   margin-left: 10%;
-  margin-top: 75px;
+  margin-top: 25px;
   text-align: center;
 }
 
@@ -375,67 +349,40 @@ hr {
   margin: 0 auto;
 }
 
-.register__step__2 .number__steps {
-  width: 70%;
-  height: 30px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.register__step__2 .number__steps .steps__hr {
-  width: 46.5%;
-  float: left;
-  margin-top: 14px;
-  color: #707070;
-}
-
-.register__step__2 .number__steps .circle:nth-child(3) {
+.register__step__2 .steps .element_3 .circle {
   width: 30px;
   height: 30px;
   border-radius: 25px;
   float: left;
   background-color: #ffffff;
+  margin-left: -14px;
+  margin-top: 0;
 }
 
-.register__step__2 .number__steps .circle:nth-child(1) {
+.register__step__2 .steps .element_1 .circle {
   width: 20px;
   height: 20px;
   border-radius: 25px;
   float: left;
   border: 1px solid #707070;
   margin-top: 5px;
+  background-color: #1f1f1f;
+  margin-left: -9px;
 }
 
-.register__step__2 .number__steps .circle:nth-child(5) {
+.register__step__2 .steps .element_5 .circle {
   width: 20px;
   height: 20px;
   border-radius: 25px;
   float: left;
   border: 1px solid #707070;
   margin-top: 5px;
+  background-color: #1f1f1f;
+  margin-left: -9px;
 }
 
-.register__step__2 .name__steps {
-  position: absolute;
-  width: 60%;
-  height: 60px;
-}
-
-.register__step__2 .name__step__1 {
-  left: 157px;
-}
-
-.register__step__2 .name__step__2 {
-  left: 508px;
-}
-
-.register__step__2 .name__step__2 .namestp,
-.register__step__2 .name__step__2 .nmbstp {
-  color: #e3e3e3;
-}
-
-.register__step__2 .name__step__3 {
-  left: 855px;
+.register__step__2 .steps .element_3 .title, .register__step__2 .steps .element_3 .text {
+  color: #ffffff;
 }
 
 .register__step__2 .information__block__row {
@@ -564,77 +511,51 @@ hr {
   display: none;
 }
 
-.register__step__3 .number__steps {
-  width: 70%;
-  height: 30px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.register__step__3 .number__steps .steps__hr {
-  width: 43%;
-  float: left;
-  margin-top: 14px;
-  color: #707070;
-}
-
-.register__step__3 .number__steps .circle:nth-child(5) {
+.register__step__3 .steps .element_5 .circle {
   width: 30px;
   height: 30px;
   border-radius: 25px;
   float: left;
   background-color: #ffffff;
+  margin-left: -14px;
+  margin-top: 0;
 }
 
-.register__step__3 .number__steps .circle:nth-child(1) {
+.register__step__3 .steps .element_1 .circle {
   width: 20px;
   height: 20px;
   border-radius: 25px;
   float: left;
   border: 1px solid #707070;
   margin-top: 5px;
+  background-color: #1f1f1f;
+  margin-left: -9px;
 }
 
-.register__step__3 .number__steps .circle:nth-child(3) {
+.register__step__3 .steps .element_3 .circle {
   width: 20px;
   height: 20px;
   border-radius: 25px;
   float: left;
   border: 1px solid #707070;
   margin-top: 5px;
+  background-color: #1f1f1f;
+  margin-left: -9px;
 }
 
-.register__step__3 .name__steps {
-  width: 90%;
-  height: 60px;
-  margin: 0 auto;
-}
-
-.register__step__3 .name__step__1 {
-  left: 10px;
-}
-
-.register__step__3 .name__step__3 {
-  left: 225px;
-}
-
-.register__step__3 .name__step__3 .namestp,
-.register__step__3 .name__step__3 .nmbstp {
-  color: #e3e3e3;
-}
-
-.register__step__3 .name__step__2 {
-  left: 115px;
+.register__step__3 .steps .element_5 .title, .register__step__3 .steps .element_5 .text {
+  color: #ffffff;
 }
 
 .register__step__3 .finish__content {
   width: 80%;
   height: 470px;
   margin: 0 auto;
-  /* flex-элемент */
 }
 
 .register__step__3 .finish__content .block__row {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -689,15 +610,17 @@ hr {
 }
 
 .register__step__3 .buttons__step__3 {
-  margin: 30px auto;
+  margin: 10px auto;
   width: 90%;
-  height: 50px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -707,14 +630,13 @@ hr {
   height: 50px;
   text-align: center;
   line-height: 50px;
-  margin: 10px auto;
   position: relative;
   cursor: pointer;
 }
 
 .register__step__3 .prev__step__2__button:hover svg rect {
   stroke: red;
-  stroke-width: 3;
+  stroke-width: 5;
   stroke-dasharray: 5, 5;
   stroke-dashoffset: 0;
 }
@@ -724,70 +646,86 @@ hr {
   height: 50px;
   text-align: center;
   line-height: 50px;
-  margin: 10px auto;
   position: relative;
   cursor: pointer;
 }
 
 .register__step__3 .register__finish__button:hover svg rect {
   stroke: greenyellow;
-  stroke-width: 3;
+  stroke-width: 5;
   stroke-dasharray: 5, 5;
   stroke-dashoffset: 0;
 }
 
-@media (max-width: 729px) {
-  .nav__btn, .input__style, .mess__err, .button {
-    color: #ffffff;
-    font-family: "Segoe UI";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 18px;
+@media (max-width: 750px) {
+  .register__block {
+    width: 100%;
   }
-  .login__block {
+  .register__step__1 {
     width: 90%;
+    margin: 0 auto;
+    height: 572px;
   }
-  .mess__err {
-    color: red;
-    margin-left: 12%;
+  .register__step__1 .number__steps {
+    width: 84%;
+    height: 30px;
   }
-  .button {
-    width: 160px;
-    height: 44px;
-    margin-right: 10%;
+  .register__step__1 .number__steps .steps__hr {
+    width: 43%;
   }
-}
-
-@media (max-width: 500px) {
-  .nav__btn, .input__style, .mess__err, .button {
-    color: #ffffff;
-    font-family: "Segoe UI";
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 18px;
-  }
-  .login__block {
+  .register__step__1 .name__steps {
     width: 90%;
-  }
-  .mess__err {
-    color: red;
-    margin-left: 12%;
-  }
-  .case__log__btn {
+    height: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .button {
-    width: 160px;
-    height: 44px;
-    margin-right: 0;
+  .register__step__1 .name__step__1 {
+    clear: left;
+  }
+  .register__step__1 .name__step__1 .namestp,
+  .register__step__1 .name__step__1 .nmbstp {
+    color: #e3e3e3;
+  }
+  .name__step__1,
+  .name__step__2,
+  .name__step__3 {
+    position: relative;
+    width: 150px;
+    height: 60px;
+  }
+  .input__block {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 75px;
+    text-align: center;
+  }
+  .green__div {
+    width: 25px;
+    height: 50px;
+    background-color: #73ff4a;
+    position: absolute;
+    margin-left: 50px;
+    border-radius: 1000px 0 0 1000px;
+    display: none;
+    -webkit-box-shadow: 0 0 50px rgba(115, 255, 74, 0.8);
+            box-shadow: 0 0 50px rgba(115, 255, 74, 0.8);
+  }
+  .next__step__2__button {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px auto;
+    position: relative;
+    cursor: pointer;
+  }
+  .next__step__2__button:hover svg rect {
+    stroke-width: 3;
+    stroke-dasharray: 5, 5;
+    stroke-dashoffset: 0;
   }
 }
