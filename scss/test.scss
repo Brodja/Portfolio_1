@@ -1,59 +1,61 @@
 * {
     box-sizing: border-box;
+    // border: 1px solid rgb(255, 0, 0);
 }
-@mixin circle($w) {
-    width: $w;
-    height: $w;
-    border-radius: 25px;
-    float: left;
-}
-.wrapper {
-    width: 70%;
-    height: 1000px;
-    margin: 0 auto;
-}
-.nav {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 100px;
-    display: flex;
-}
-.el_2,
-.el_4 {
-    flex-grow: 1;
-}
-.el_1,
-.el_3,
-.el_5 {
-    .block__content {
-        width: 2px;
-        height: 90px;
-        columns: 10px 1;
+// .wrapper {
+//     width: 70%;
+//     height: 1000px;
+//     margin: 0 auto;
+//     display: grid;
+//     grid-template-rows: 1fr 1fr 1fr;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-gap: 2vw;
+// }
+
+
+body { 
+    display: grid;
+    grid-template-areas: 
+      "header header header"
+      "nav article ads"
+      "footer footer footer";
+    grid-template-rows: 80px 1fr 70px;  
+    grid-template-columns: 20% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+    }  
+  /* Stack the layout on small devices/viewports. */
+  @media all and (max-width: 575px) {
+    body { 
+      grid-template-areas: 
+        "header"
+        "article"
+        "ads"
+        "nav"
+        "footer";
+      grid-template-rows: 80px 1fr 70px 1fr 70px;  
+      grid-template-columns: 1fr;
+   }
+  }
+  header, footer, article, nav, div {
+    padding: 1.2em;
+    background: gold;
     }
-}
-.circle_big {
-    @include circle(30px);
-    background-color: red;
-    z-index: 3;
-    position: relative;
-}
-.circle_small {
-    @include circle(20px);
-    border: 1px solid #7c6f6f;
-    margin-top: 5px;
-    background-color: #22ff22;
-}
-.name {
-    width: 120px;
-    margin-left: -50px;
-    margin-top: 30px;
-}
-.title, .text{
-    text-align: center;
-}
-.line{
-color: black;
-size: 2px;
-margin-top: 15px;
-z-index: 1;
-}
+  #pageHeader {
+    grid-area: header;
+    }
+  #pageFooter {
+    grid-area: footer;
+    }
+  #mainArticle { 
+    grid-area: article;      
+    }
+  #mainNav { 
+    grid-area: nav; 
+    }
+  #siteAds { 
+    grid-area: ads; 
+    } 
+  
