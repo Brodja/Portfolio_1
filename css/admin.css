@@ -684,10 +684,10 @@ hr {
     background-color: #2e2e2e;
   }
   .wrapper {
+    padding-top: 50px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-top: 2%;
   }
   .register__step__2 {
     width: 60%;
