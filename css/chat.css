@@ -1,0 +1,494 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a,
+a:active,
+a:focus {
+  outline: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:active,
+textarea:active {
+  outline: none;
+}
+
+:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+textarea {
+  resize: horizontal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #2e2e2e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content {
+  width: 96%;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dialog__story {
+  width: 29%;
+  height: 100%;
+}
+
+.block__chat {
+  width: 69%;
+  height: 100%;
+}
+
+.dialog__story,
+.block__chat {
+  background-color: #1f1f1f;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.dialog__story .content__box,
+.block__chat .content__box {
+  margin-top: 35px;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+}
+
+.title {
+  width: 100%;
+  margin-top: -25px;
+  text-align: center;
+}
+
+.title .text {
+  width: 250px;
+  height: 50px;
+  background-color: #474747;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+}
+
+.title #dialogs {
+  display: none;
+}
+
+.block__chat .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#person_list {
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.person {
+  width: 97%;
+  min-height: 95px;
+  background-color: #313131;
+  border-radius: 30px;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.person .foto {
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  border-radius: 50%;
+  background: url(../images/foto3_0.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.person .person__info {
+  width: 50%;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.person .person__info .name {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+.person .person__info .text {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.person .time {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  width: 60px;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.person .time .time__text {
+  width: 40px;
+}
+
+.person:last-child {
+  margin-bottom: 0px;
+}
+
+.block__chat .content__box hr {
+  color: #ffffff;
+}
+
+.chat__window {
+  width: 100%;
+  height: 80%;
+  overflow-y: auto;
+}
+
+.chat__window .message {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chat__window .msg__content {
+  width: 48%;
+}
+
+.chat__window .msg {
+  width: 100%;
+  min-height: 85px;
+  background-color: #474747;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.chat__window .message:nth-child(even) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.chat__window .msg__foto {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  margin: 5px 15px;
+}
+
+.chat__window .ava {
+  position: absolute;
+  top: 0;
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  border-radius: 50%;
+  background: url(../images/foto3_0.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.chat__window .msg__info {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 5px 10px;
+}
+
+.chat__window .msg__info .name {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  margin-bottom: 10px;
+}
+
+.chat__window .msg__info .text {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.chat__window .time {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  width: 60px;
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+}
+
+.chat__window .time .time__text {
+  width: 40px;
+}
+
+.enter__field {
+  width: 100%;
+  height: 10%;
+  min-height: 60px;
+  margin-bottom: 15px;
+}
+
+.enter__field .input {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: 1px solid #797979;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  resize: none;
+  padding: 15px 30px 15px 30px;
+}
+
+.buttons {
+  width: 100%;
+  height: 10%;
+  min-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.send__btn {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.send__btn:hover svg rect {
+  stroke-width: 3;
+  stroke-dasharray: 15, 15;
+  stroke-dashoffset: 7;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+svg rect {
+  stroke: #797979;
+  stroke-width: 3;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  stroke-dasharray: 300, 0;
+}
+
+@media (max-width: 1300px) {
+  .dialog__story {
+    display: block;
+  }
+  .block__chat .content__box {
+    display: block;
+  }
+}
+
+@media (max-width: 1300px) {
+  .dialog__story {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .dialog__story .title {
+    display: none;
+  }
+  .block__chat {
+    width: 100%;
+  }
+  .block__chat .title #dialogs {
+    display: block;
+    padding-top: 12px;
+  }
+  .block__chat .title .active {
+    -webkit-box-shadow: 0 0 10px rgba(115, 255, 74, 0.8);
+            box-shadow: 0 0 10px rgba(115, 255, 74, 0.8);
+    color: #73ff4a;
+  }
+  .block__chat .title .text {
+    cursor: pointer;
+  }
+  .chat__window .msg__foto {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+  .chat__window .msg__foto .ava {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-height: 800px) {
+  .chat__window {
+    height: 75%;
+  }
+}
+
+@media (max-height: 650px) {
+  .chat__window {
+    height: 65%;
+  }
+}
+
+@media (max-width: 650px) {
+  #person_list .person .foto {
+    width: 50px;
+    height: 50px;
+  }
+  .title .text {
+    width: 130px;
+    height: 50px;
+    background-color: #474747;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 30px;
+  }
+  .chat__window .message {
+    margin-bottom: 35px;
+  }
+  .chat__window .message .msg__content {
+    width: 90%;
+  }
+}

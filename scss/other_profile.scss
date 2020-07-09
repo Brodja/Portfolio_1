@@ -426,70 +426,62 @@ body {
             display: none;
         }
         .like__counter {
-           
             .content {
-               
                 font-size: 30px;
                 font-weight: 600;
-                
             }
-           
         }
     }
     .right {
-        .content{
-          
-            .buttons{
+        .content {
+            .buttons {
                 width: 100%;
             }
         }
-}
-@media (max-width: 600px) {
-    .like__counter {
-        width: 28%;
     }
-    .right {
-        .foto {
+    @media (max-width: 600px) {
+        .like__counter {
+            width: 28%;
+        }
+        .right {
             .foto {
-                width: 150px;
-                height: 150px;
+                .foto {
+                    width: 150px;
+                    height: 150px;
+                }
             }
         }
     }
-}
 
-@media (max-width: 420px) {
-
-    .right {
-        .content{
-            .header{
-                flex-direction: column;
-                
+    @media (max-width: 420px) {
+        .right {
+            .content {
+                .header {
+                    flex-direction: column;
+                }
             }
-        }
-        .info {
-            .block__row {
-                .block__element_1,
-                .block__element_2,
-                .block__element_3,
-                .block__element_4,
-                .block__element_5,
-                .block__element_6,
-                .block__element_7 {
-                    flex: 0 1 100%;
-                    padding: 0;
+            .info {
+                .block__row {
+                    .block__element_1,
+                    .block__element_2,
+                    .block__element_3,
+                    .block__element_4,
+                    .block__element_5,
+                    .block__element_6,
+                    .block__element_7 {
+                        flex: 0 1 100%;
+                        padding: 0;
+                    }
                 }
             }
         }
     }
 }
-}
-@media (orientation: landscape) {
-    
+@media (max-width: 800px) and (orientation: landscape) {
     .left {
         height: 50%;
         .nav {
             height: 40%;
         }
     }
-  }
+}

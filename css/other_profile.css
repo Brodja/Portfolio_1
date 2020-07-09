@@ -602,7 +602,7 @@ body {
   }
 }
 
-@media (orientation: landscape) {
+@media (max-width: 800px) and (orientation: landscape) {
   .left {
     height: 50%;
   }
